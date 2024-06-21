@@ -94,7 +94,7 @@ class BlogController {
   };
 
   // Find all blogs in the db with a given title or author or both
-  // Title or Author or both of them required as params
+  // Title or Author or both of them required
   findBlogsByFilter = async (req, res) => {
     try {
       const { title, author } = req.query;
