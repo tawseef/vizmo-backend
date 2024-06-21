@@ -11,8 +11,8 @@ async function handleUserSignup(req, res) {
       .json({ message: "Signup Successful", username: user.name });
   } catch (error) {
     res
-      .status(httpStatus.INTERNAL_SERVER_ERROR)
-      .json({ message: "Internal Server Error", error });
+      .status(httpStatus.BAD_REQUEST)
+      .json({ message: "Check credential", error });
   }
 }
 
