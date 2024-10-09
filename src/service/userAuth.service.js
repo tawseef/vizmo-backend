@@ -46,6 +46,7 @@ class Auth{
     verifyPassword = async (email, password)=>{
       try{
         const user = await User.findOne({email});
+        ////
         const isValid = await bcrypt.compare(password, user.password);
             if(isValid) return user;
             else return null;
